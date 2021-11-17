@@ -3,10 +3,12 @@ import Post from "../components/Post/Post";
 
 const ListPage = ({ posts }) => (
   <>
-    <h1>ListPage</h1>
-    {posts.map((post) => (
-      <Post key={post.id} post={post} />
-    ))}
+    <h1>CSRPage</h1>
+    {posts ? (
+      posts.map((post) => <Post key={post.id} post={post} />)
+    ) : (
+      <h3>LOADING</h3>
+    )}
   </>
 );
 
